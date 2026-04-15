@@ -44,3 +44,6 @@ Veerg väli - поле
 -üks-mitele (nt naine-lapsed)
 -mitme-mitmele(õpilased-tunnid)
 -<img width="516" height="242" alt="{EF968DAD-058C-43E2-9414-EB18A5024840}" src="https://github.com/user-attachments/assets/6c928365-46ed-4098-a0d9-f2e7e359c209" />
+
+<img width="664" height="631" alt="{E2C7650E-52E9-4000-AEEE-1C6383BDA878}" src="https://github.com/user-attachments/assets/4b7fd3f9-229d-452a-b8a7-a9b3e69c89ec" />
+
