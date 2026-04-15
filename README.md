@@ -2,7 +2,7 @@
 andmebaaside haldusega seotud sql kood ja konspektid
 
 ## Põhimõisted
--Andmebaasihaldussüsteemid - tarkvara, millega abil saab luua andmebaas (MariaDB - XAMPP, SQL Server - SQL Server Managment studio)
+-Andmebaasihaldussüsteemid - tarkvara, millega abil saab luua andmebaas (MariaDB - XAMPP, SQL Server - SQL Server Managment studio sERVER NAME: (LocalDB)\MSSQLLocalDB)
 -Andmebaas - struktureeritud  abdnete kogum
 -Tabel - olem -сущности 
 Veerg väli - поле
