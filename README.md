@@ -1,4 +1,11 @@
+## Sisukord
 andmebaaside haldusega seotud sql kood ja konspektid
+
+## Sisukord
+
+-[Põhimõisted](#Põhimõisted)
+-[Piirangud](#Piirangud)
+
 
 ## Põhimõisted
 -Andmebaasihaldussüsteemid - tarkvara, millega abil saab luua andmebaas (MariaDB - XAMPP, SQL Server - SQL Server Managment studio)
@@ -15,7 +22,6 @@ Veerg väli - поле
 1.DDL - Data Definition Language
 2.DML - Data Manipulation Language
 
- ## Piirangud - ограничения - 
  ## Piirangud - ограничения - Constant(5)
  1.PRIMARY KEY
  2.NOT NULL
