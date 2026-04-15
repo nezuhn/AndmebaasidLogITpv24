@@ -28,3 +28,10 @@ Veerg väli - поле
  1.int, smallint, decimal(5,2) - numbrilised
  2.varchar(30), char(5), TEXT - tekst/sümboolised
  3.date, time, datetime - kuupäeva
+ 4.boolean, bit, bool - logiilised
+```
+## Tabelivahelised seosed
+-üks - ühele (nt naine-mees)
+-üks-mitele (nt naine-lapsed)
+-mitme-mitmele(õpilased-tunnid)
+-<img width="516" height="242" alt="{EF968DAD-058C-43E2-9414-EB18A5024840}" src="https://github.com/user-attachments/assets/6c928365-46ed-4098-a0d9-f2e7e359c209" />
