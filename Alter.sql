@@ -13,7 +13,7 @@ perenimi varchar(30)not null,
 synniaeg date,
 aadress TEXT,
 koormus int CHECK (koormus>0), -- piirang, et koormus >0
-aktiivne bit)
+aktiivne bit);
 
 --tabeli kuvamine
 SELECT * FROM tootaja;
