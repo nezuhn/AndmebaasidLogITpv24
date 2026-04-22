@@ -31,6 +31,7 @@ Veerg väli - поле
  3.CHECK - valik
  4.UNIQUE
  5.FOREIGN KEY
+ 
 
  ## Andmetüübid
  ```
