@@ -47,3 +47,18 @@ Veerg väli - поле
 
 <img width="664" height="631" alt="{E2C7650E-52E9-4000-AEEE-1C6383BDA878}" src="https://github.com/user-attachments/assets/4b7fd3f9-229d-452a-b8a7-a9b3e69c89ec" />
 
+-mitme-mitmele (õpilased-tunnid)
+
+## ALTER TABLE - tabelii struktuuri muutmine
+```SQL
+--1. uue veeru lisamine
+ALTER TABLE tootaja ADD testVeerg int;
+Select * from tootaja;
+--2. veeru kustutamine
+ALTER TABLE tootaja DROP COLUMN testVeerg;
+--3. andmetüübi muutmine veerus
+ALTER TABLE tootaja ALTER COLUMN testVeerg varchar(5);
+--struktuuri kontrollimiseks kasutamine protseduur sp_help
+sp_help tootaja;
+```
+
