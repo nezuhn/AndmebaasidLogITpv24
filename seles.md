@@ -15,7 +15,7 @@ select * from categories;
 
 
 2. Brands
-```
+```sql
 create table brands(
 brandId int Primary Key identity(1,1),
 brand_name varchar(15) UNIQUE);
@@ -27,7 +27,7 @@ select * from brands;
 
 
 3.Products
-```
+```sql
 Create table products(
 productId int primary key identity(1,1),
 product_Name varchar(50) not null,
@@ -46,7 +46,7 @@ select * from products
 
 
 4.Stores
-```
+```sql
 create table stores(
 StoreId int primary key identity(1,1),
 Store_Name varchar(20) not null,
@@ -66,7 +66,7 @@ select * from stores;
 
 
 5.Stocks
-```
+```sql
 create table stocks(
 storeId int,
 ProductId int,
@@ -83,7 +83,7 @@ select * from stocks;
 
 
 6.Customers
-```
+```sql
 create table customers(
 customerId int primary key identity(1,1),
 first_name varchar(10),
@@ -104,7 +104,7 @@ values('Artjom', 'Davunov', '+3725739812', 'd.artjom@gmail.com', 'Taamsare 15', 
 
 
 7.Staffs
-```
+```sql
 create table staff(
 staffId int primary key identity(1,1),
 first_name varchar(15) not null,
@@ -125,7 +125,7 @@ values('Viktor', 'Verben', 'v.viktor@gmail.com', '+3725999925', 1, 3, 3)
 
 
 8.Orders
-```
+```sql
 Create table orders(
 orderId int primary key identity(1,1),
 customerId int,
@@ -149,7 +149,7 @@ select * from orders;
 
 9.Order Items
 
-```
+```sql
 create table order_items(
 orderId int,
 itemId int, 
