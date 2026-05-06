@@ -108,7 +108,7 @@ DECLARE @minHind MONEY, @maxHind MONEY;
 EXEC minmaxHind @minHind OUTPUT, @maxHind OUTPUT;
 
 PRINT 'Min hind = ' + CONVERT(varchar, @minHind);
-PRINT 'Mix hind = ' + CONVERT(varchar, @mixHind);
+PRINT 'Max hind = ' + CONVERT(varchar, @maxHind);
 
 --6. universaalne protseduur, mis töötab üks kõik millise tabeliga
 -- muudab struktuuri(veeru lisamine -ADD, veeru kustutamine -DROP)
@@ -140,3 +140,5 @@ SELECT * FROM categories;
 
 EXEC muudatus 'drop', 'categories', 'testVeerg'
 ```
+<img width="537" height="326" alt="{195BFD02-55EF-4B0F-85E8-2E3AA80D316D}" src="https://github.com/user-attachments/assets/f633bcdf-4820-437f-8136-a0dd510ff691" />
+
