@@ -48,3 +48,43 @@ END
 EXEC otsing1taht 't';
 ```
 <img width="244" height="203" alt="{E6BBD33B-FB0F-416E-B787-73E613B698E7}" src="https://github.com/user-attachments/assets/99b73fed-5156-4432-b666-a9a8de564fc9" />
+
+
+```SQL
+--brandid
+create table brands(
+brandId int Primary Key identity(1,1),
+brand_name varchar(15) UNIQUE);
+Insert into brands(brand_name)
+values('Apple')
+select * from brands;
+
+--3. products
+Create table products(
+productId int primary key identity(1,1),
+product_Name varchar(50) not null,
+brandId int, 
+foreign key (brandId) references brands (brandId),
+category_Id int,
+foreign key (category_Id) references categories(category_Id),
+model_year int,
+list_prices money);
+
+
+INSERT INTO products
+values ('Samsung S23', 1, 3, 2025, 720);
+select * from products
+
+--protseduur, mis kuvab tooded, kus on hind suurem kui sisestatud
+create procedure suuremHind
+@hind int
+AS
+BEGIN
+	SELECT * FROM  products
+	WHERE list_prices > @hind;
+END;
+
+--kutse
+EXEC suuremHind 700;
+```
+<img width="454" height="390" alt="{7E3E5FA4-B896-4EEF-8ABB-F205C26741EB}" src="https://github.com/user-attachments/assets/0eb00737-647c-4ded-8431-04e7faa63c0a" />
