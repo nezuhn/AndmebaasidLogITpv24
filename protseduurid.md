@@ -88,3 +88,55 @@ END;
 EXEC suuremHind 700;
 ```
 <img width="454" height="390" alt="{7E3E5FA4-B896-4EEF-8ABB-F205C26741EB}" src="https://github.com/user-attachments/assets/0eb00737-647c-4ded-8431-04e7faa63c0a" />
+
+```SQL
+--OUTPUT parameetr
+CREATE PROCEDURE minmaxHind
+	@minHind MONEY OUTPUT,
+	@maxHind MONEY OUTPUT
+AS
+BEGIN
+	SELECT
+		@minHind = MIN(list_prices),
+		@maxHind = MAX(list_prices)
+	FROM products;
+END;
+
+--kutse
+DECLARE @minHind MONEY, @maxHind MONEY;
+
+EXEC minmaxHind @minHind OUTPUT, @maxHind OUTPUT;
+
+PRINT 'Min hind = ' + CONVERT(varchar, @minHind);
+PRINT 'Mix hind = ' + CONVERT(varchar, @mixHind);
+
+--6. universaalne protseduur, mis töötab üks kõik millise tabeliga
+-- muudab struktuuri(veeru lisamine -ADD, veeru kustutamine -DROP)
+
+CREATE PROCEDURE muudatus
+    @tegevus varchar(10),
+    @tabelinimi varchar(25),
+    @veerunimi varchar(25),
+    @tyyp varchar(25) = NULL
+AS
+BEGIN
+    DECLARE @sqltegevus varchar(max);
+
+    SET @sqltegevus = CASE 
+        WHEN @tegevus = 'add' THEN 
+            CONCAT('ALTER TABLE ', @tabelinimi, ' ADD ', @veerunimi, ' ', @tyyp)
+
+        WHEN @tegevus = 'drop' THEN 
+            CONCAT('ALTER TABLE ', @tabelinimi, ' DROP COLUMN ', @veerunimi)
+    END;
+
+    PRINT @sqltegevus;
+    EXEC (@sqltegevus);
+END;
+
+EXEC muudatus 'add', 'categories', 'testVeerg', 'int' 
+
+SELECT * FROM categories;
+
+EXEC muudatus 'drop', 'categories', 'testVeerg'
+```
