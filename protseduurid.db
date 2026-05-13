@@ -1,0 +1,106 @@
+create database arseni13_05;
+use arseni13_05 
+
+create table client(
+clientId int primary key identity (1, 1),
+clientName varchar(20),
+clientCity varchar(20),
+clientAge int,
+clientBal int,)
+
+insert into client
+values(  'Artjom Murov', 'Tallinn', '19', '200' );
+
+select * from client
+drop table 
+
+
+--protseduur mis tagastab cliendi nimi ja linn
+create procedure tagastabNimiLinn
+AS
+BEGIN 
+	SELECT clientName, clientCity FROM client
+END
+EXEC tagastabNimiLinn 
+
+
+--protsedur mis lisab uue kliendi 
+create procedure lisaClient
+--parametrq
+@clientName varchar(20),
+@clientCity varchar(20),
+@clientAge int,
+@clientBal int
+AS
+BEGIN
+	INSERT INTO client(clientName, clientCity, clientAge, clientBal)
+	VALUES (@clientName, @clientCity, @clientAge, @clientBal);
+	SELECT * FROM client;
+END;
+EXEC lisaClient 'Arseni', 'Tallinn', 18, 200
+
+--protseduur mis renew linn or balance from id 
+create procedure renewlinnball
+@uuslinn varchar(10),
+@id int
+AS
+BEGIN
+	select * from client
+	UPDATE client
+	set clientCity=@uuslinn
+	where clientId=@id
+	select * from client
+END;
+drop procedure renewlinnball
+EXEC renewlinnball 'Narva', 2
+
+--protseduur mis kustutab kliendi from id
+
+CREATE procedure kustutaKategooria
+@kustutaId int
+AS
+BEGIN
+	SELECT * FROM client;
+	DELETE FROM client WHERE clientId=@kustutaId
+	SELECT * FROM client;
+END
+--kutse
+EXEC kustutaKategooria 1
+
+--otsi cliendi 1 tähti
+CREATE PROCEDURE otsing1taht
+@taht char(1)
+AS
+BEGIN
+	SELECT * FROM client
+	WHERE clientName LIKE @taht + '%'; --% - teised sümboolid  
+	select * from client
+END
+
+--kutse
+EXEC otsing1taht 'a';
+drop procedure otsing1taht
+
+
+create procedure otsingminmaxbal
+--parameetrid
+@minbal MONEY OUTPUT,
+@maxbal MONEY OUTPUT
+AS
+BEGIN
+	SELECT
+		@minbal = min(clientbal),
+		@maxbal = max(clientbal)
+	from client
+end;
+
+--kutse 
+declare @minbal money, @maxbal money;
+
+EXEC otsingminmaxbal @minbal output, @maxbal output;
+
+PRINT 'min hind = ' + convert(varchar, @minbal);
+PRINT 'max hind = ' + convert(varchar, @maxbal);
+
+
+
