@@ -1,0 +1,9 @@
+sql server kasutajate authenticated 
+Authemtimine 
+
+1.Windows Authentication Selle puhul kasutatakse samu kasutajaadnmeid, millega logitakse sisse windows operatsioonisüsteemi
+
+2.Swl server authentication
+
+Näide Kasutajast: DirectorArseni. Parool:1234Qwer
+Kasutaja loomine SQL Serveris
