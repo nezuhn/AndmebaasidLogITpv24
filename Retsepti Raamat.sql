@@ -114,3 +114,68 @@ select * from koostis
 select * from tehtud
 select * from toiduaine
 
+
+--Protseduurid
+create procedure lisatoiduaine
+@uustoideaine varchar(50)
+AS
+BEGIN
+	insert into toiduaine(toiduaineNimi)
+	values(@uustoideaine)
+	select  * from toiduaine
+END;
+exec lisatoiduaine mayo
+
+create Procedure lisakasutaja
+@uuseesnimi varchar(50),
+@uusperenimi varchar(50),
+@uusemail varchar(150)
+AS
+BEGIN
+	insert into kasutaja(eesnimi, perenimi, email)
+	values(@uuseesnimi, @uusperenimi, @uusemail)
+	select * from kasutaja
+END;
+exec lisakasutaja 'Marko', 'Nagiev', 'm.nagiev@gmail.com'
+
+create procedure muudatabel
+@tegevus varchar(50),
+@tabelinimi varchar(50),
+@veerunmi varchar(50),
+@tyyp varchar(50)=null
+AS
+BEGIN
+	DECLARE @sqltegevus varchar(max);
+
+	SET @sqltegevus = CASE
+		WHEN @tegevus = 'add' THEN
+			CONCAT('ALTER TABLE', @tabelinimi, 'ADD', @veerunimi, ' ', @tyyp)
+		WHEN @tegevus = 'drop' THEN
+			CONCAT('ALTER TABLE', @tabelinimi, 'DROP COLUMN', @veerunimi)
+		WHEN @tegevus = 'change' THEN
+			CONCAT('ALTER TABLE', @tabelinimi, 'ALTER COLUMN', @veerunmi, ' ', @tyyp)
+	END;
+	PRINT @sqltegevus;
+	EXEC (@sqltegevus);
+END;
+
+EXEC muudatabel 'drop', 'toiduaine', 'toiduaine_kogus'
+select * from
+
+
+--users policies (staff)
+GRANT SELECT ON toiduaine TO staff;
+GRANT SELECT ON kategooria TO staff;
+GRANT SELECT ON kasutaja TO staff;
+
+GRANT INSERT ON toiduaine TO staff;
+GRANT INSERT ON kategooria TO staff;
+
+DENY DELETE ON toiduaine TO staff;
+DENY DELETE ON kategooria TO staff;
+
+DENY UPDATE ON toiduaine TO staff;
+DENY UPDATE ON kategooria TO staff;
+
+
+
