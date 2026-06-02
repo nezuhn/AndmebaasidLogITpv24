@@ -3,7 +3,7 @@ andmebaaside haldusega seotud sql kood ja konspektid
 
 ## Sisukord
 
-[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](kasutaja.md) | [Trigerid](triger.md)
+[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](kasutajad.md) | [Trigerid](triger.md)
 
 
 ## Põhimõisted
