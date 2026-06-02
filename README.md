@@ -3,11 +3,7 @@ andmebaaside haldusega seotud sql kood ja konspektid
 
 ## Sisukord
 
--[Põhimõisted](#Põhimõisted)
--[SQL](#SQL)
--[Piirangud](#Piirangud)
--[Andmetüübid](#Andmetüübid)
--[Tabelivahelised](#Tabelivahelised)
+[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](kasutaja.md) | [Trigerid](triger.md)
 
 
 ## Põhimõisted
