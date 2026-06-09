@@ -1,3 +1,4 @@
+## Navigeerimine
 ## Andmebaas sales
 ```sql
 create database salesRumjantsev;
