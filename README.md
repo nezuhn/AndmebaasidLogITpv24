@@ -1,5 +1,4 @@
-## Sisukord
-andmebaaside haldusega seotud sql kood ja konspektid
+
 
 ## Sisukord
 
