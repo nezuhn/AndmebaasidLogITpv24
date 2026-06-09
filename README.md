@@ -1,8 +1,6 @@
-
-
 ## Navigeerimine
-[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[Sales](Sales.md)
 
+[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[Sales](Sales.md)
 
 ## Põhimõisted
 -Andmebaasihaldussüsteemid - tarkvara, millega abil saab luua andmebaas (MariaDB - XAMPP, SQL Server - SQL Server Managment studio)
