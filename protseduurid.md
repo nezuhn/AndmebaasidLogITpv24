@@ -1,6 +1,7 @@
-## Navigeerimine
+## Andmebaaside Arseni Rumjantsevi konspekt
 
 [Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[Sales](Sales.md)
+
 ## SQL protseduur -
 store procedure - salvestatud protseduurid - sama miis on funktsioonid programmeerimises, mingi tegevus, mis 
 on salvestatud andmebaasi, ja mida saab automaatsel teha(INSERT, UPDATE, SELECT, UPDATE).
