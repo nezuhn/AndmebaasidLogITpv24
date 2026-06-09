@@ -22,6 +22,7 @@ END;
 ```SQL
 
 --kutse
+ALTER TABLE kategooria ADD CONSTRAINT UQ_kategooria_nimi UNIQUE (kategooria_nimi);
 EXEC lisaKategooria 'Tablet';
 
 -- protseduur, mis kustutab kategooria id järgi
