@@ -1,4 +1,5 @@
 ## Navigeerimine
+[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[Sales](Sales.md)
 ## Andmebaas sales
 ```sql
 create database salesRumjantsev;
