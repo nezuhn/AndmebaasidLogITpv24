@@ -1,6 +1,6 @@
 
 
-## Sisukord
+## Navigeerimine
 [Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[Sales](Sales.md)
 
 
