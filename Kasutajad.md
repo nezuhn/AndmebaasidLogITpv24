@@ -1,5 +1,7 @@
-## Navigeerimine
+## Andmebaaside Arseni Rumjantsevi konspekt
+
 [Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[Sales](Sales.md)
+
 
 ## SQL Server kasutajate authenticated 
 
