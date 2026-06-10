@@ -1,6 +1,6 @@
 ## Andmebaaside Arseni Rumjantsev Konspekt
 
-[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[keys.md](keys.md)
+[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[Keys](keys.md)
 
 create database keys;
 use keys;
