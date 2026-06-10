@@ -1,6 +1,6 @@
-## Andmebaaside Arseni Rumjantsevi konspekt
+## Andmebaaside Arseni Rumjantsev Konspekt
 
-[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[Sales](Sales.md)
+[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[keys.md](keys.md)
 
 ## SQL protseduur -
 store procedure - salvestatud protseduurid - sama miis on funktsioonid programmeerimises, mingi tegevus, mis 
