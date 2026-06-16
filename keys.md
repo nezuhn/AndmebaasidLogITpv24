@@ -1,3 +1,7 @@
+## Andmebaaside Arseni Rumjantsev Konspekt
+
+[Põhimõisted](README.md) | [Protseduurid](protseduurid.md) | [Kasutajad](Kasutajad.md) | [Trigerid](triger.md) |[keys](keys.md)
+
 ## Primary Key 
 
 ### Definitsioon
